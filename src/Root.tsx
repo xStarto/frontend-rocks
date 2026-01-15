@@ -9,5 +9,5 @@ export const Root = () => {
   );
 }
 export const Card = (props : { title: string, image : string }) => {
-  return <div className="bg-gray-300 h-40 w-40 text-up flex justify-center rounded-md" title={props.title}>{props.title}</div>;
+  return <div className="bg-gray-300 h-40 w-40 text-up flex justify-center rounded-md" title={props.title} image={props.image}>{props.title}</div>;
 };

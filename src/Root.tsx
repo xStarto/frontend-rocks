@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router";
-
 export const Root = () => {
   return (
     <div className="pt-10 pl-10 space-y-10 space-x-10 flex justify-start flex-wrap items-start h-screen">

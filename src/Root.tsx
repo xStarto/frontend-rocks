@@ -167,6 +167,7 @@ export function Root() {
                   </div>
 
                   <div className="mb-6">
+                    
                     <h2 className="text-2xl font-bold mb-3">Statistiche</h2>
                     <div className="space-y-2">
                       {selectedPokemonDetails.stats?.map((stat: any) => (

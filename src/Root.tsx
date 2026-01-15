@@ -5,6 +5,7 @@ export const Root = () => {
       <Card title="Charmander" image="https://www.clipartmax.com/png/middle/38-382976_charmander-pokemon-png-image-free-download-charmander-pokemon-png.png" />
     </div>
   );
+  
 
 }
 export const Card = (props : { title: string, image : string }) => {

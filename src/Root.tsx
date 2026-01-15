@@ -71,7 +71,6 @@ export function Root() {
   }[]>([]);
   const [selectedPokemonId, setSelectedPokemonId] = useState<number | null>(null);
   const [selectedPokemonDetails, setSelectedPokemonDetails] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     PokeAPI.listPokemons()
@@ -93,7 +92,6 @@ export function Root() {
   }, []);
 
   const handleCardClick = async (id: number) => {
-    setLoading(true);
     try {
       const details = await PokeAPI.getPokemonById(id);
       setSelectedPokemonId(id);
@@ -101,7 +99,6 @@ export function Root() {
     } catch (error) {
       console.error("Error fetching Pokemon details:", error);
     }
-    setLoading(false);
   };
 
   const closeModal = () => {
@@ -167,8 +164,6 @@ export function Root() {
                   </div>
 
                   <div className="mb-6">
-
-                    
                     <h2 className="text-2xl font-bold mb-3">Statistiche</h2>
                     <div className="space-y-2">
                       {selectedPokemonDetails.stats?.map((stat: any) => (
